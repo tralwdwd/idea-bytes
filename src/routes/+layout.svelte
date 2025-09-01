@@ -10,9 +10,9 @@
 	<link rel="icon" href={favicon} />
 	<title>IdeaBytes</title>
 </svelte:head>
-<div class="h-screen text-[#111827] bg-white dark:bg-[#111827] dark:text-white">
+<div class="min-h-screen text-[#111827] bg-white dark:bg-[#111827] dark:text-white">
 	<Navbar />
-	<div class="pt-16 h-full">
+	<div class="pt-16 mb-0">
 		{@render children?.()}
 	</div>
 </div>
