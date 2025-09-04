@@ -18,6 +18,20 @@ class WhatToCode {
         })
     }
 
+    async getIdeaById(id: string) {
+        try{
+            let row = await this.database.getRow({
+                databaseId: "what-to-code",
+                tableId: "ideas",
+                rowId: id
+            })
+            return row;
+        } catch {
+            return null;
+        } 
+        
+    }
+
     async isLoggedIn() {
         try {
             await this.account.get()
